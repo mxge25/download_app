@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تحميل تطبيق فوراً | النسخة التجريبية للمختبرين (Closed Beta)</title>
+  <meta name="description" content="صفحة الانضمام والتحميل للإصدار التجريبي المغلق لتطبيق فوراً عبر Google Play ومجموعة Pharmaverse.">
+  
+  <!-- Open Graph / Meta for Social Sharing -->
+  <meta property="og:title" content="تحميل تطبيق فوراً | الإصدار التجريبي">
+  <meta property="og:description" content="اتبع الخطوات البسيطة للانضمام لمجموعة المختبرين وتحميل التطبيق من Google Play">
+  <meta property="og:image" content="assets/app-icon.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/app-icon.jpg">
+
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Background Glowing Orbs -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="toast" role="alert" aria-live="polite">
+    <svg class="toast-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+    </svg>
+    <span id="toast-message">تم نسخ الإيميل بنجاح!</span>
+  </div>
+
+  <main class="page-container">
+    <!-- Header / Brand Section -->
+    <header class="header">
+      <div class="badge-wrapper">
+        <span class="status-badge pulse">
+          <span class="badge-dot"></span>
+          مرحلة الاختبار المغلق • Closed Beta
+        </span>
+      </div>
+
+      <div class="app-branding">
+        <div class="icon-frame">
+          <img src="assets/app-icon.jpg" alt="أيقونة تطبيق فوراً" class="app-logo">
+          <div class="icon-ring"></div>
+        </div>
+        <h1 class="app-title">تطبيق <span class="gradient-text">فَوْراً</span></h1>
+        <p class="app-id-tag">
+          <code>com.genuistechfawran</code>
+        </p>
+        <p class="app-tagline">
+          أهلاً بك في برنامج الاختبار الحصري للتطبيق. لتتمكن من التحميل من متجر Google Play، يُرجى اتباع الخطوتين بالترتيب أدناه.
+        </p>
+      </div>
+
+      <!-- Quick Steps Stepper -->
+      <div class="stepper-overview">
+        <div class="stepper-item active" id="step-nav-1">
+          <div class="step-circle">1</div>
+          <span class="step-label">انضمام للمجموعة</span>
+        </div>
+        <div class="stepper-line" id="stepper-progress"></div>
+        <div class="stepper-item" id="step-nav-2">
+          <div class="step-circle">2</div>
+          <span class="step-label">تحميل التطبيق</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Cards Section -->
+    <section class="steps-section" aria-label="خطوات التحميل">
+
+      <!-- Step 1 Card -->
+      <div class="step-card active-card" id="card-step-1">
+        <div class="card-header">
+          <div class="step-badge">
+            <span class="badge-number">1</span>
+            <span class="badge-title">الخطوة الأولى (ضرورية جداً)</span>
+          </div>
+          <div class="step-status-chip" id="chip-step-1">مطلوب أولاً</div>
+        </div>
+
+        <h2 class="card-title">الانضمام إلى مجموعة المختبرين (Google Group)</h2>
+        <p class="card-desc">
+          سياسة جوجل بلاي للاختبار المغلق تتطلب أن يكون حسابك مسجلاً في مجموعة المختبرين المعتمدة، وبدون ذلك ستظهر لك صفحة المتجر رسالة <span class="highlight-text">"العنصر غير متاح"</span>.
+        </p>
+
+        <!-- Group Info Box with Copy Button -->
+        <div class="email-box">
+          <div class="email-info">
+            <span class="email-label">إيميل المجموعة (Google Group):</span>
+            <span class="email-value" id="group-email">pharmaverse@googlegroups.com</span>
+          </div>
+          <button class="btn-copy" id="btn-copy-email" type="button" aria-label="نسخ إيميل المجموعة" title="نسخ إلى الحافظة">
+            <svg class="copy-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span class="copy-text">نسخ الإيميل</span>
+          </button>
+        </div>
+
+        <div class="alert-notice">
+          <svg class="alert-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <div class="alert-content">
+            <strong>تنبيه هام:</strong> تأكد من الضغط على زر <strong>"الانضمام إلى المجموعة" (Join Group)</strong> باستخدام <u>نفس إيميل جوجل</u> المستخدم في متجر Play على هاتفك.
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="https://groups.google.com/g/pharmaverse" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-join-group">
+            <span>انضم لمجموعة Google Groups الآن</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Manual Confirmation checkbox to guide user -->
+        <div class="confirm-check-wrapper">
+          <label class="custom-checkbox">
+            <input type="checkbox" id="check-joined">
+            <span class="checkmark"></span>
+            <span class="label-text">لقد انضممت إلى المجموعة بالفعل (الانتقال للتحميل)</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Step 2 Card -->
+      <div class="step-card" id="card-step-2">
+        <div class="card-header">
+          <div class="step-badge">
+            <span class="badge-number">2</span>
+            <span class="badge-title">الخطوة الثانية</span>
+          </div>
+          <div class="step-status-chip ready" id="chip-step-2">جاهز للتحميل</div>
+        </div>
+
+        <h2 class="card-title">تنزيل التطبيق من متجر Google Play</h2>
+        <p class="card-desc">
+          بمجرد قبولك أو انضمامك للجروب، يمكنك الآن فتح رابط المتجر والبدء في تثبيت التطبيق مباشرة وتجربته.
+        </p>
+
+        <div class="store-links-grid">
+          <!-- Primary Store Link Button -->
+          <a href="https://play.google.com/store/apps/details?id=com.genuistechfawran" target="_blank" rel="noopener noreferrer" class="btn-store-primary">
+            <div class="play-icon-wrap">
+              <svg viewBox="0 0 512 512" width="36" height="36">
+                <path fill="#4285F4" d="M32.5 3.3C24.8 7.3 20 15.3 20 25v462c0 9.7 4.8 17.7 12.5 21.7l242.4-252.7L32.5 3.3z"/>
+                <path fill="#34A853" d="M374.2 169.5L274.9 256l99.3 86.5 106.1-60.6c18.5-10.6 18.5-38.2 0-48.8l-106.1-63.6z"/>
+                <path fill="#EA4335" d="M274.9 256L32.5 508.7c7.4 3.9 16.6 3.6 24.3-.8l317.4-181.4-99.3-70.5z"/>
+                <path fill="#FBBC04" d="M274.9 256l99.3-86.5L56.8 4.1c-7.7-4.4-16.9-4.7-24.3-.8L274.9 256z"/>
+              </svg>
+            </div>
+            <div class="btn-store-text">
+              <span class="subtext">متاح الآن على</span>
+              <span class="maintext">Google Play</span>
+            </div>
+          </a>
+
+          <!-- Web Testing Opt-in Link (Very important fallback in closed test) -->
+          <a href="https://play.google.com/apps/testing/com.genuistechfawran" target="_blank" rel="noopener noreferrer" class="btn-store-secondary">
+            <div class="web-icon-wrap">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <div class="secondary-text">
+              <span class="sec-title">رابط قبول الدعوة عبر الويب (Web Tester)</span>
+              <span class="sec-sub">استخدمه إذا ظهر لك المتجر غير متوفر مباشرة</span>
+            </div>
+            <span class="sec-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Troubleshooting & Tips Section -->
+    <section class="faq-section" aria-label="الأسئلة الشائعة والملاحظات">
+      <h3 class="section-heading">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+        تنبيهات وحلول سريعة لو واجهتك مشكلة
+      </h3>
+
+      <div class="faq-grid">
+        <div class="faq-card">
+          <div class="faq-q">
+            <span class="faq-num">١</span>
+            <h4>ظهرت لي رسالة "العنصر غير متاح" (Item not found)؟</h4>
+          </div>
+          <p class="faq-a">
+            سيرفرات جوجل بلاي قد تستغرق ما بين <strong>دقيقتين إلى ٥ دقائق</strong> بعد انضمامك لمجموعة Google لتحديث صلاحيات حسابك. انتظر قليلاً ثم أعد فتح الرابط، أو افتح رابط <strong>قبول الدعوة عبر الويب (Web Opt-in)</strong> أولاً واضغط "Become a Tester".
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-q">
+            <span class="faq-num">٢</span>
+            <h4>أكثر من حساب جوجل على هاتفك؟</h4>
+          </div>
+          <p class="faq-a">
+            تأكد من فتح رابط المتجر بالحساب الذي انضممت به للجروب. إذا فتح بحساب آخر، قم بتبديل الحساب من أعلى يمين تطبيق متجر Google Play.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-q">
+            <span class="faq-num">٣</span>
+            <h4>كيف ترسل ملاحظاتك أو تقارير الأخطاء؟</h4>
+          </div>
+          <p class="faq-a">
+            داخل صفحة التطبيق في Google Play، ستجد خيار <strong>"إرسال تعليقات للمطوّر" (Private Feedback)</strong>، وهي ميزة مخصصة لمختبري الإصدار المغلق للتواصل المباشر مع فريق التطوير.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Share & Footer Area -->
+    <footer class="footer">
+      <div class="share-box">
+        <p class="share-title">هل تريد دعوة زميل للمشاركة في التجربة؟</p>
+        <button class="btn-share" id="btn-share-page" type="button">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+          مشاركة رابط هذه الصفحة
+        </button>
+      </div>
+
+      <div class="footer-bottom">
+        <p>تطبيق فوراً • جميع الحقوق محفوظة لشركة Genuis Tech</p>
+        <p class="footer-sub">Pharmaverse Closed Testing Program</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
